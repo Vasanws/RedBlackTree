@@ -123,6 +123,39 @@ void test_rightRotate_given_100_50_10_expect_correct_rotation() {
 }
 
 /*
+        50                          15
+       / \                         /  \
+      15 55    ============>      10  50
+     / \       rotate right          /  \
+   10  14                           14  55
+*/
+
+void test_rightRotate_given_50_15_55_10_14_expect_right_rotate() {
+  // root node 
+  rbtRoot = node50;
+  
+  setupRbtNode(node10, RED, NULL, NULL);
+  setupRbtNode(node14, RED, NULL, NULL);
+  setupRbtNode(node15, RED, node10, node14);
+  setupRbtNode(node55, RED, NULL, NULL);
+  setupRbtNode(node50, RED, node15, node55);
+  
+  rightRotate(&rbtRoot);
+  
+  TEST_ASSERT_EQUAL(node15, rbtRoot);
+  TEST_ASSERT_EQUAL(node10, node15->left);
+  TEST_ASSERT_EQUAL(node50, node15->right);
+  TEST_ASSERT_EQUAL(node14, node50->left);
+  TEST_ASSERT_EQUAL(node55, node50->right);
+  TEST_ASSERT_EQUAL(NULL, node14->left);
+  TEST_ASSERT_EQUAL(NULL, node14->right);
+  TEST_ASSERT_EQUAL(NULL, node55->left);
+  TEST_ASSERT_EQUAL(NULL, node55->right);
+  TEST_ASSERT_EQUAL(NULL, node10->left);
+  TEST_ASSERT_EQUAL(NULL, node10->right);
+}
+
+/*
     18                 9
    /     ======>      / \
   9      rotate    NULL 18
@@ -799,15 +832,43 @@ void test_rbtAddNode_given_newNode_11_expect_recolour_and_left_rotate() {
 }
 
 /*
-       12(B)
-      /   \
-    9(B)  18(B) 
-    /
-   8(R)
-   /
-  7(R) 
-
+       12(B)                      12(B)                           12(B)
+      /   \                       /   \                          /    \
+    9(B)  18(B)    =========>   9(B) 18(B)    ============>    8(B)  18(B)
+    /              add node7    /             recolour &      /   \
+   8(R)                        8(R)           right rotate   7(R) 9(R)
+                               /
+                              7(R)
 */
+
+void test_rbtAddNode_given_newNode_7_expect_recolour_and_right_rotate() {
+  // root node 
+  rbtRoot = node12;
+  
+  setupRbtNode(node8, RED, NULL, NULL);
+  setupRbtNode(node18, BLACK, NULL, NULL);
+  setupRbtNode(node9, BLACK, node8, NULL);
+  setupRbtNode(node12, BLACK, node9, node18);
+  
+  rbtAddNode(&rbtRoot, node7);
+  
+  TEST_ASSERT_EQUAL(node12, rbtRoot);
+  TEST_ASSERT_EQUAL(node8, node12->left);
+  TEST_ASSERT_EQUAL(node7, node8->left);
+  TEST_ASSERT_EQUAL(node9, node8->right);
+  TEST_ASSERT_EQUAL(node18, node12->right);
+  TEST_ASSERT_EQUAL(NULL, node7->left);
+  TEST_ASSERT_EQUAL(NULL, node7->right);
+  TEST_ASSERT_EQUAL(NULL, node9->left);
+  TEST_ASSERT_EQUAL(NULL, node9->right);
+  TEST_ASSERT_EQUAL(NULL, node18->left);
+  TEST_ASSERT_EQUAL(NULL, node18->right);
+  TEST_ASSERT_EQUAL(BLACK, node12->colour);
+  TEST_ASSERT_EQUAL(BLACK, node8->colour);
+  TEST_ASSERT_EQUAL(BLACK, node18->colour);
+  TEST_ASSERT_EQUAL(RED, node7->colour);
+  TEST_ASSERT_EQUAL(RED, node9->colour);
+}
 
     
 

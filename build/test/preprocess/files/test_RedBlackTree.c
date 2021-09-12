@@ -463,6 +463,146 @@ void test_rightRotate_given_100_50_10_expect_correct_rotation() {
 
 }
 
+void test_rightRotate_given_50_15_55_10_14_expect_right_rotate() {
+
+
+
+  rbtRoot = node50;
+
+
+
+  setupRbtNode(node10, RED, 
+
+                           ((void *)0)
+
+                               , 
+
+                                 ((void *)0)
+
+                                     );
+
+  setupRbtNode(node14, RED, 
+
+                           ((void *)0)
+
+                               , 
+
+                                 ((void *)0)
+
+                                     );
+
+  setupRbtNode(node15, RED, node10, node14);
+
+  setupRbtNode(node55, RED, 
+
+                           ((void *)0)
+
+                               , 
+
+                                 ((void *)0)
+
+                                     );
+
+  setupRbtNode(node50, RED, node15, node55);
+
+
+
+  rightRotate(&rbtRoot);
+
+
+
+  UnityAssertEqualNumber((UNITY_INT)((node15)), (UNITY_INT)((rbtRoot)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(145), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((node10)), (UNITY_INT)((node15->left)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(146), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((node50)), (UNITY_INT)((node15->right)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(147), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((node14)), (UNITY_INT)((node50->left)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(148), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((node55)), (UNITY_INT)((node50->right)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(149), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((
+
+ ((void *)0)
+
+ )), (UNITY_INT)((node14->left)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(150), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((
+
+ ((void *)0)
+
+ )), (UNITY_INT)((node14->right)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(151), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((
+
+ ((void *)0)
+
+ )), (UNITY_INT)((node55->left)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(152), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((
+
+ ((void *)0)
+
+ )), (UNITY_INT)((node55->right)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(153), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((
+
+ ((void *)0)
+
+ )), (UNITY_INT)((node10->left)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(154), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((
+
+ ((void *)0)
+
+ )), (UNITY_INT)((node10->right)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(155), UNITY_DISPLAY_STYLE_INT);
+
+}
+
 void test_rightRotate_given_18_9_expect_correct_rotation() {
 
 
@@ -497,7 +637,7 @@ void test_rightRotate_given_18_9_expect_correct_rotation() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(141), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(174), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -507,13 +647,13 @@ void test_rightRotate_given_18_9_expect_correct_rotation() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(142), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(175), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node18)), (UNITY_INT)((node9->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(143), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(176), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -523,7 +663,7 @@ void test_rightRotate_given_18_9_expect_correct_rotation() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(144), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(177), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -533,7 +673,7 @@ void test_rightRotate_given_18_9_expect_correct_rotation() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(145), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(178), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -577,19 +717,19 @@ void test_leftRotation_given_50_60_70_expect_left_rotation() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(166), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(199), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node50)), (UNITY_INT)((node60->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(167), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(200), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node70)), (UNITY_INT)((node60->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(168), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(201), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -599,7 +739,7 @@ void test_leftRotation_given_50_60_70_expect_left_rotation() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(169), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(202), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -609,7 +749,7 @@ void test_leftRotation_given_50_60_70_expect_left_rotation() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(170), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(203), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -619,7 +759,7 @@ void test_leftRotation_given_50_60_70_expect_left_rotation() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(171), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(204), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -629,7 +769,7 @@ void test_leftRotation_given_50_60_70_expect_left_rotation() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(172), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(205), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -685,31 +825,31 @@ void test_leftRotate_given_node_20_15_30_25_35_expect_left_rotate() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(196), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(229), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node20)), (UNITY_INT)((node30->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(197), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(230), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node35)), (UNITY_INT)((node30->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(198), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(231), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node15)), (UNITY_INT)((node20->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(199), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(232), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node25)), (UNITY_INT)((node20->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(200), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(233), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -719,7 +859,7 @@ void test_leftRotate_given_node_20_15_30_25_35_expect_left_rotate() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(201), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(234), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -729,7 +869,7 @@ void test_leftRotate_given_node_20_15_30_25_35_expect_left_rotate() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(202), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(235), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -739,7 +879,7 @@ void test_leftRotate_given_node_20_15_30_25_35_expect_left_rotate() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(203), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(236), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -749,7 +889,7 @@ void test_leftRotate_given_node_20_15_30_25_35_expect_left_rotate() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(204), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(237), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -759,7 +899,7 @@ void test_leftRotate_given_node_20_15_30_25_35_expect_left_rotate() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(205), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(238), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -769,7 +909,7 @@ void test_leftRotate_given_node_20_15_30_25_35_expect_left_rotate() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(206), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(239), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -821,13 +961,13 @@ void test_leftRotation_given_12_and_14_expect_left_rotation() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(224), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(257), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node12)), (UNITY_INT)((node14->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(225), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(258), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -837,7 +977,7 @@ void test_leftRotation_given_12_and_14_expect_left_rotation() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(226), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(259), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -847,7 +987,7 @@ void test_leftRotation_given_12_and_14_expect_left_rotation() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(227), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(260), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -857,7 +997,7 @@ void test_leftRotation_given_12_and_14_expect_left_rotation() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(228), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(261), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -901,19 +1041,19 @@ void test_rightLeftRotate_given_2_7_5_expect_right_left_rotate_correctly() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(248), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(281), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node2)), (UNITY_INT)((node5->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(249), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(282), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node7)), (UNITY_INT)((node5->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(250), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(283), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -923,7 +1063,7 @@ void test_rightLeftRotate_given_2_7_5_expect_right_left_rotate_correctly() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(251), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(284), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -933,7 +1073,7 @@ void test_rightLeftRotate_given_2_7_5_expect_right_left_rotate_correctly() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(252), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(285), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -943,7 +1083,7 @@ void test_rightLeftRotate_given_2_7_5_expect_right_left_rotate_correctly() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(253), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(286), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -953,7 +1093,7 @@ void test_rightLeftRotate_given_2_7_5_expect_right_left_rotate_correctly() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(254), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(287), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -997,19 +1137,19 @@ void test_leftRightRotate_given_7_5_6_expect_left_right_rotate_correctly() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(275), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(308), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node5)), (UNITY_INT)((node6->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(276), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(309), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node7)), (UNITY_INT)((node6->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(277), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(310), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1019,7 +1159,7 @@ void test_leftRightRotate_given_7_5_6_expect_left_right_rotate_correctly() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(278), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(311), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1029,7 +1169,7 @@ void test_leftRightRotate_given_7_5_6_expect_left_right_rotate_correctly() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(279), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(312), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1039,7 +1179,7 @@ void test_leftRightRotate_given_7_5_6_expect_left_right_rotate_correctly() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(280), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(313), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1049,7 +1189,7 @@ void test_leftRightRotate_given_7_5_6_expect_left_right_rotate_correctly() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(281), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(314), UNITY_DISPLAY_STYLE_INT);
 
 
 
@@ -1107,25 +1247,25 @@ void test_leftRightRotate_given_50_55_60_65_70_expect_left_right_rotate_correctl
 
  ((void *)0)
 
- ), (UNITY_UINT)(307), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(340), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node50)), (UNITY_INT)((node60->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(308), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(341), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node70)), (UNITY_INT)((node60->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(309), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(342), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node55)), (UNITY_INT)((node50->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(310), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(343), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1135,7 +1275,7 @@ void test_leftRightRotate_given_50_55_60_65_70_expect_left_right_rotate_correctl
 
  ((void *)0)
 
- ), (UNITY_UINT)(311), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(344), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1145,13 +1285,13 @@ void test_leftRightRotate_given_50_55_60_65_70_expect_left_right_rotate_correctl
 
  ((void *)0)
 
- ), (UNITY_UINT)(312), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(345), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node65)), (UNITY_INT)((node70->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(313), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(346), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1161,7 +1301,7 @@ void test_leftRightRotate_given_50_55_60_65_70_expect_left_right_rotate_correctl
 
  ((void *)0)
 
- ), (UNITY_UINT)(314), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(347), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1171,7 +1311,7 @@ void test_leftRightRotate_given_50_55_60_65_70_expect_left_right_rotate_correctl
 
  ((void *)0)
 
- ), (UNITY_UINT)(315), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(348), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1181,7 +1321,7 @@ void test_leftRightRotate_given_50_55_60_65_70_expect_left_right_rotate_correctl
 
  ((void *)0)
 
- ), (UNITY_UINT)(316), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(349), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1191,7 +1331,7 @@ void test_leftRightRotate_given_50_55_60_65_70_expect_left_right_rotate_correctl
 
  ((void *)0)
 
- ), (UNITY_UINT)(317), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(350), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -1237,13 +1377,13 @@ void test_rbtAddNode_given_newNode_9_expect_add_9_into_tree_left_colour_RED_no_v
 
  ((void *)0)
 
- ), (UNITY_UINT)(334), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(367), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node9)), (UNITY_INT)((node12->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(335), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(368), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1253,7 +1393,7 @@ void test_rbtAddNode_given_newNode_9_expect_add_9_into_tree_left_colour_RED_no_v
 
  ((void *)0)
 
- ), (UNITY_UINT)(336), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(369), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1263,7 +1403,7 @@ void test_rbtAddNode_given_newNode_9_expect_add_9_into_tree_left_colour_RED_no_v
 
  ((void *)0)
 
- ), (UNITY_UINT)(337), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(370), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1273,19 +1413,19 @@ void test_rbtAddNode_given_newNode_9_expect_add_9_into_tree_left_colour_RED_no_v
 
  ((void *)0)
 
- ), (UNITY_UINT)(338), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(371), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node12->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(339), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(372), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node9->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(340), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(373), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -1335,19 +1475,19 @@ void test_rbtAddNode_given_newNode_18_expect_add_18_into_tree_right_colour_RED_n
 
  ((void *)0)
 
- ), (UNITY_UINT)(357), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(390), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node9)), (UNITY_INT)((node12->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(358), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(391), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node18)), (UNITY_INT)((node12->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(359), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(392), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1357,7 +1497,7 @@ void test_rbtAddNode_given_newNode_18_expect_add_18_into_tree_right_colour_RED_n
 
  ((void *)0)
 
- ), (UNITY_UINT)(360), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(393), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1367,7 +1507,7 @@ void test_rbtAddNode_given_newNode_18_expect_add_18_into_tree_right_colour_RED_n
 
  ((void *)0)
 
- ), (UNITY_UINT)(361), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(394), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1377,7 +1517,7 @@ void test_rbtAddNode_given_newNode_18_expect_add_18_into_tree_right_colour_RED_n
 
  ((void *)0)
 
- ), (UNITY_UINT)(362), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(395), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1387,25 +1527,25 @@ void test_rbtAddNode_given_newNode_18_expect_add_18_into_tree_right_colour_RED_n
 
  ((void *)0)
 
- ), (UNITY_UINT)(363), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(396), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node12->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(364), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(397), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node9->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(365), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(398), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node18->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(366), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(399), UNITY_DISPLAY_STYLE_INT);
 
 
 
@@ -1465,25 +1605,25 @@ void test_rbtAddNode_given_newNode_16_expect_add_16_into_tree_violation_properti
 
  ((void *)0)
 
- ), (UNITY_UINT)(386), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(419), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node9)), (UNITY_INT)((node12->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(387), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(420), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node18)), (UNITY_INT)((node12->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(388), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(421), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node16)), (UNITY_INT)((node18->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(389), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(422), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1493,7 +1633,7 @@ void test_rbtAddNode_given_newNode_16_expect_add_16_into_tree_violation_properti
 
  ((void *)0)
 
- ), (UNITY_UINT)(390), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(423), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1503,7 +1643,7 @@ void test_rbtAddNode_given_newNode_16_expect_add_16_into_tree_violation_properti
 
  ((void *)0)
 
- ), (UNITY_UINT)(391), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(424), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1513,7 +1653,7 @@ void test_rbtAddNode_given_newNode_16_expect_add_16_into_tree_violation_properti
 
  ((void *)0)
 
- ), (UNITY_UINT)(392), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(425), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1523,7 +1663,7 @@ void test_rbtAddNode_given_newNode_16_expect_add_16_into_tree_violation_properti
 
  ((void *)0)
 
- ), (UNITY_UINT)(393), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(426), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1533,31 +1673,31 @@ void test_rbtAddNode_given_newNode_16_expect_add_16_into_tree_violation_properti
 
  ((void *)0)
 
- ), (UNITY_UINT)(394), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(427), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node12->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(395), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(428), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node9->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(396), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(429), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node18->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(397), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(430), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node16->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(398), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(431), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -1613,37 +1753,37 @@ void test_rbtAddNode_given_newNode_15_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(422), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(455), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node9)), (UNITY_INT)((node12->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(423), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(456), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node17)), (UNITY_INT)((node12->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(424), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(457), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node16)), (UNITY_INT)((node17->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(425), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(458), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node18)), (UNITY_INT)((node17->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(426), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(459), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node15)), (UNITY_INT)((node16->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(427), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(460), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1653,7 +1793,7 @@ void test_rbtAddNode_given_newNode_15_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(428), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(461), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1663,7 +1803,7 @@ void test_rbtAddNode_given_newNode_15_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(429), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(462), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1673,7 +1813,7 @@ void test_rbtAddNode_given_newNode_15_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(430), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(463), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1683,7 +1823,7 @@ void test_rbtAddNode_given_newNode_15_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(431), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(464), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1693,7 +1833,7 @@ void test_rbtAddNode_given_newNode_15_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(432), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(465), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1703,7 +1843,7 @@ void test_rbtAddNode_given_newNode_15_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(433), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(466), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1713,43 +1853,43 @@ void test_rbtAddNode_given_newNode_15_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(434), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(467), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node12->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(435), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(468), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node9->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(436), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(469), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node17->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(437), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(470), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node16->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(438), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(471), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node18->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(439), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(472), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node15->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(440), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(473), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -1805,37 +1945,37 @@ void test_rbtAddNode_given_newNode_19_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(464), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(497), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node9)), (UNITY_INT)((node12->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(465), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(498), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node17)), (UNITY_INT)((node12->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(466), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(499), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node16)), (UNITY_INT)((node17->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(467), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(500), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node18)), (UNITY_INT)((node17->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(468), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(501), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node19)), (UNITY_INT)((node18->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(469), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(502), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1845,7 +1985,7 @@ void test_rbtAddNode_given_newNode_19_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(470), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(503), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1855,7 +1995,7 @@ void test_rbtAddNode_given_newNode_19_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(471), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(504), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1865,7 +2005,7 @@ void test_rbtAddNode_given_newNode_19_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(472), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(505), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1875,7 +2015,7 @@ void test_rbtAddNode_given_newNode_19_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(473), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(506), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1885,7 +2025,7 @@ void test_rbtAddNode_given_newNode_19_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(474), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(507), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -1895,43 +2035,43 @@ void test_rbtAddNode_given_newNode_19_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(475), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(508), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node12->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(476), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(509), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node9->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(477), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(510), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node17->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(478), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(511), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node16->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(479), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(512), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node18->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(480), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(513), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node19->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(481), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(514), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -1987,37 +2127,37 @@ void test_rbtAddNode_given_newNode_55_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(505), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(538), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node9)), (UNITY_INT)((node12->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(506), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(539), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node50)), (UNITY_INT)((node12->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(507), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(540), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node18)), (UNITY_INT)((node50->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(508), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(541), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node60)), (UNITY_INT)((node50->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(509), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(542), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node55)), (UNITY_INT)((node60->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(510), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(543), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2027,7 +2167,7 @@ void test_rbtAddNode_given_newNode_55_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(511), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(544), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2037,7 +2177,7 @@ void test_rbtAddNode_given_newNode_55_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(512), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(545), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2047,7 +2187,7 @@ void test_rbtAddNode_given_newNode_55_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(513), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(546), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2057,7 +2197,7 @@ void test_rbtAddNode_given_newNode_55_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(514), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(547), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2067,7 +2207,7 @@ void test_rbtAddNode_given_newNode_55_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(515), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(548), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2077,43 +2217,43 @@ void test_rbtAddNode_given_newNode_55_expect_recolour_there_are_two_RED_in_the_t
 
  ((void *)0)
 
- ), (UNITY_UINT)(516), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(549), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node12->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(517), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(550), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node9->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(518), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(551), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node50->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(519), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(552), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node18->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(520), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(553), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node60->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(521), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(554), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node55->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(522), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(555), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -2163,31 +2303,31 @@ void test_rbtAddNode_given_newNode_17_expect_rotate_left_right_to_balance_the_tr
 
  ((void *)0)
 
- ), (UNITY_UINT)(546), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(579), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node9)), (UNITY_INT)((node12->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(547), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(580), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node17)), (UNITY_INT)((node12->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(548), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(581), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node16)), (UNITY_INT)((node17->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(549), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(582), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node18)), (UNITY_INT)((node17->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(550), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(583), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2197,7 +2337,7 @@ void test_rbtAddNode_given_newNode_17_expect_rotate_left_right_to_balance_the_tr
 
  ((void *)0)
 
- ), (UNITY_UINT)(551), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(584), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2207,7 +2347,7 @@ void test_rbtAddNode_given_newNode_17_expect_rotate_left_right_to_balance_the_tr
 
  ((void *)0)
 
- ), (UNITY_UINT)(552), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(585), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2217,7 +2357,7 @@ void test_rbtAddNode_given_newNode_17_expect_rotate_left_right_to_balance_the_tr
 
  ((void *)0)
 
- ), (UNITY_UINT)(553), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(586), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2227,7 +2367,7 @@ void test_rbtAddNode_given_newNode_17_expect_rotate_left_right_to_balance_the_tr
 
  ((void *)0)
 
- ), (UNITY_UINT)(554), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(587), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2237,7 +2377,7 @@ void test_rbtAddNode_given_newNode_17_expect_rotate_left_right_to_balance_the_tr
 
  ((void *)0)
 
- ), (UNITY_UINT)(555), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(588), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2247,37 +2387,37 @@ void test_rbtAddNode_given_newNode_17_expect_rotate_left_right_to_balance_the_tr
 
  ((void *)0)
 
- ), (UNITY_UINT)(556), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(589), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node12->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(557), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(590), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node9->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(558), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(591), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node17->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(559), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(592), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node18->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(560), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(593), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node16->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(561), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(594), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -2327,31 +2467,31 @@ void test_rbtAddNode_given_newNode_19_expect_rotate_right_left_to_balance_the_tr
 
  ((void *)0)
 
- ), (UNITY_UINT)(585), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(618), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node9)), (UNITY_INT)((node12->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(586), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(619), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node19)), (UNITY_INT)((node12->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(587), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(620), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node18)), (UNITY_INT)((node19->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(588), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(621), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node20)), (UNITY_INT)((node19->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(589), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(622), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2361,7 +2501,7 @@ void test_rbtAddNode_given_newNode_19_expect_rotate_right_left_to_balance_the_tr
 
  ((void *)0)
 
- ), (UNITY_UINT)(590), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(623), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2371,7 +2511,7 @@ void test_rbtAddNode_given_newNode_19_expect_rotate_right_left_to_balance_the_tr
 
  ((void *)0)
 
- ), (UNITY_UINT)(591), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(624), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2381,7 +2521,7 @@ void test_rbtAddNode_given_newNode_19_expect_rotate_right_left_to_balance_the_tr
 
  ((void *)0)
 
- ), (UNITY_UINT)(592), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(625), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2391,7 +2531,7 @@ void test_rbtAddNode_given_newNode_19_expect_rotate_right_left_to_balance_the_tr
 
  ((void *)0)
 
- ), (UNITY_UINT)(593), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(626), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2401,7 +2541,7 @@ void test_rbtAddNode_given_newNode_19_expect_rotate_right_left_to_balance_the_tr
 
  ((void *)0)
 
- ), (UNITY_UINT)(594), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(627), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2411,37 +2551,37 @@ void test_rbtAddNode_given_newNode_19_expect_rotate_right_left_to_balance_the_tr
 
  ((void *)0)
 
- ), (UNITY_UINT)(595), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(628), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node12->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(596), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(629), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node9->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(597), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(630), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node19->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(598), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(631), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node18->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(599), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(632), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node20->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(600), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(633), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -2503,43 +2643,43 @@ void test_rbtAddNode_given_newNode_14_expect_recolour_and_rotate_right() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(630), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(663), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node9)), (UNITY_INT)((node12->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(631), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(664), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node17)), (UNITY_INT)((node12->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(632), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(665), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node15)), (UNITY_INT)((node17->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(633), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(666), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node18)), (UNITY_INT)((node17->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(634), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(667), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node14)), (UNITY_INT)((node15->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(635), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(668), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node16)), (UNITY_INT)((node15->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(636), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(669), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2549,7 +2689,7 @@ void test_rbtAddNode_given_newNode_14_expect_recolour_and_rotate_right() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(637), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(670), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2559,7 +2699,7 @@ void test_rbtAddNode_given_newNode_14_expect_recolour_and_rotate_right() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(638), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(671), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2569,7 +2709,7 @@ void test_rbtAddNode_given_newNode_14_expect_recolour_and_rotate_right() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(639), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(672), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2579,7 +2719,7 @@ void test_rbtAddNode_given_newNode_14_expect_recolour_and_rotate_right() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(640), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(673), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2589,7 +2729,7 @@ void test_rbtAddNode_given_newNode_14_expect_recolour_and_rotate_right() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(641), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(674), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2599,7 +2739,7 @@ void test_rbtAddNode_given_newNode_14_expect_recolour_and_rotate_right() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(642), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(675), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2609,7 +2749,7 @@ void test_rbtAddNode_given_newNode_14_expect_recolour_and_rotate_right() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(643), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(676), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2619,49 +2759,49 @@ void test_rbtAddNode_given_newNode_14_expect_recolour_and_rotate_right() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(644), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(677), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node12->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(645), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(678), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node9->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(646), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(679), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node17->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(647), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(680), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node18->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(648), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(681), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node15->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(649), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(682), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node16->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(650), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(683), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node14->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(651), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(684), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -2723,43 +2863,43 @@ void test_rbtAddNode_given_newNode_20_expect_recolour_and_rotate_left() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(680), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(713), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node9)), (UNITY_INT)((node12->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(681), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(714), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node17)), (UNITY_INT)((node12->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(682), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(715), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node16)), (UNITY_INT)((node17->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(683), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(716), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node19)), (UNITY_INT)((node17->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(684), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(717), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node18)), (UNITY_INT)((node19->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(685), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(718), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node20)), (UNITY_INT)((node19->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(686), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(719), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2769,7 +2909,7 @@ void test_rbtAddNode_given_newNode_20_expect_recolour_and_rotate_left() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(687), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(720), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2779,7 +2919,7 @@ void test_rbtAddNode_given_newNode_20_expect_recolour_and_rotate_left() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(688), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(721), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2789,7 +2929,7 @@ void test_rbtAddNode_given_newNode_20_expect_recolour_and_rotate_left() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(689), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(722), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2799,7 +2939,7 @@ void test_rbtAddNode_given_newNode_20_expect_recolour_and_rotate_left() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(690), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(723), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2809,7 +2949,7 @@ void test_rbtAddNode_given_newNode_20_expect_recolour_and_rotate_left() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(691), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(724), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2819,7 +2959,7 @@ void test_rbtAddNode_given_newNode_20_expect_recolour_and_rotate_left() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(692), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(725), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2829,7 +2969,7 @@ void test_rbtAddNode_given_newNode_20_expect_recolour_and_rotate_left() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(693), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(726), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -2839,49 +2979,49 @@ void test_rbtAddNode_given_newNode_20_expect_recolour_and_rotate_left() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(694), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(727), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node12->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(695), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(728), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node9->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(696), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(729), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node17->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(697), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(730), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node16->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(698), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(731), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node19->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(699), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(732), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node18->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(700), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(733), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node20->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(701), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(734), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -2949,49 +3089,49 @@ void test_rbtAddNode_given_newNode_55_expect_recolour_and_left_rotate_violation_
 
  ((void *)0)
 
- ), (UNITY_UINT)(739), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(772), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node12)), (UNITY_INT)((node17->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(740), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(773), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node9)), (UNITY_INT)((node12->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(741), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(774), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node16)), (UNITY_INT)((node12->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(742), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(775), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node20)), (UNITY_INT)((node17->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(743), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(776), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node18)), (UNITY_INT)((node20->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(744), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(777), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node50)), (UNITY_INT)((node20->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(745), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(778), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node55)), (UNITY_INT)((node50->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(746), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(779), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -3001,7 +3141,7 @@ void test_rbtAddNode_given_newNode_55_expect_recolour_and_left_rotate_violation_
 
  ((void *)0)
 
- ), (UNITY_UINT)(747), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(780), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -3011,7 +3151,7 @@ void test_rbtAddNode_given_newNode_55_expect_recolour_and_left_rotate_violation_
 
  ((void *)0)
 
- ), (UNITY_UINT)(748), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(781), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -3021,7 +3161,7 @@ void test_rbtAddNode_given_newNode_55_expect_recolour_and_left_rotate_violation_
 
  ((void *)0)
 
- ), (UNITY_UINT)(749), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(782), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -3031,7 +3171,7 @@ void test_rbtAddNode_given_newNode_55_expect_recolour_and_left_rotate_violation_
 
  ((void *)0)
 
- ), (UNITY_UINT)(750), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(783), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -3041,7 +3181,7 @@ void test_rbtAddNode_given_newNode_55_expect_recolour_and_left_rotate_violation_
 
  ((void *)0)
 
- ), (UNITY_UINT)(751), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(784), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -3051,7 +3191,7 @@ void test_rbtAddNode_given_newNode_55_expect_recolour_and_left_rotate_violation_
 
  ((void *)0)
 
- ), (UNITY_UINT)(752), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(785), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -3061,7 +3201,7 @@ void test_rbtAddNode_given_newNode_55_expect_recolour_and_left_rotate_violation_
 
  ((void *)0)
 
- ), (UNITY_UINT)(753), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(786), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -3071,7 +3211,7 @@ void test_rbtAddNode_given_newNode_55_expect_recolour_and_left_rotate_violation_
 
  ((void *)0)
 
- ), (UNITY_UINT)(754), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(787), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -3081,55 +3221,55 @@ void test_rbtAddNode_given_newNode_55_expect_recolour_and_left_rotate_violation_
 
  ((void *)0)
 
- ), (UNITY_UINT)(755), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(788), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node17->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(756), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(789), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node12->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(757), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(790), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node9->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(758), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(791), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node16->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(759), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(792), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node20->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(760), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(793), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node18->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(761), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(794), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node50->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(762), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(795), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node55->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(763), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(796), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -3179,19 +3319,19 @@ void test_rbtAddNode_given_newNode_11_expect_recolour_and_left_rotate() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(787), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(820), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node10)), (UNITY_INT)((node12->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(788), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(821), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node18)), (UNITY_INT)((node12->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(789), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(822), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -3201,7 +3341,7 @@ void test_rbtAddNode_given_newNode_11_expect_recolour_and_left_rotate() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(790), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(823), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((
 
@@ -3211,48 +3351,212 @@ void test_rbtAddNode_given_newNode_11_expect_recolour_and_left_rotate() {
 
  ((void *)0)
 
- ), (UNITY_UINT)(791), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(824), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node9)), (UNITY_INT)((node10->left)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(792), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(825), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((node11)), (UNITY_INT)((node10->right)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(793), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(826), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node12->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(794), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(827), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node10->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(795), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(828), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node18->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(796), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(829), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node9->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(797), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(830), UNITY_DISPLAY_STYLE_INT);
 
   UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node11->colour)), (
 
  ((void *)0)
 
- ), (UNITY_UINT)(798), UNITY_DISPLAY_STYLE_INT);
+ ), (UNITY_UINT)(831), UNITY_DISPLAY_STYLE_INT);
+
+}
+
+void test_rbtAddNode_given_newNode_7_expect_recolour_and_right_rotate() {
+
+
+
+  rbtRoot = node12;
+
+
+
+  setupRbtNode(node8, RED, 
+
+                          ((void *)0)
+
+                              , 
+
+                                ((void *)0)
+
+                                    );
+
+  setupRbtNode(node18, BLACK, 
+
+                             ((void *)0)
+
+                                 , 
+
+                                   ((void *)0)
+
+                                       );
+
+  setupRbtNode(node9, BLACK, node8, 
+
+                                   ((void *)0)
+
+                                       );
+
+  setupRbtNode(node12, BLACK, node9, node18);
+
+
+
+  rbtAddNode(&rbtRoot, node7);
+
+
+
+  UnityAssertEqualNumber((UNITY_INT)((node12)), (UNITY_INT)((rbtRoot)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(855), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((node8)), (UNITY_INT)((node12->left)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(856), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((node7)), (UNITY_INT)((node8->left)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(857), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((node9)), (UNITY_INT)((node8->right)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(858), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((node18)), (UNITY_INT)((node12->right)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(859), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((
+
+ ((void *)0)
+
+ )), (UNITY_INT)((node7->left)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(860), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((
+
+ ((void *)0)
+
+ )), (UNITY_INT)((node7->right)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(861), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((
+
+ ((void *)0)
+
+ )), (UNITY_INT)((node9->left)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(862), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((
+
+ ((void *)0)
+
+ )), (UNITY_INT)((node9->right)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(863), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((
+
+ ((void *)0)
+
+ )), (UNITY_INT)((node18->left)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(864), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((
+
+ ((void *)0)
+
+ )), (UNITY_INT)((node18->right)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(865), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node12->colour)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(866), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node8->colour)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(867), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((BLACK)), (UNITY_INT)((node18->colour)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(868), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node7->colour)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(869), UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((UNITY_INT)((RED)), (UNITY_INT)((node9->colour)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(870), UNITY_DISPLAY_STYLE_INT);
 
 }
