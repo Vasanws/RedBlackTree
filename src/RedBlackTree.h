@@ -1,38 +1,28 @@
 #ifndef REDBLACKTREE_H
 #define REDBLACKTREE_H
+
 #include <stddef.h>
 
 typedef struct RbtNode RbtNode;
+//              0      1
+typedef enum  {BLACK, RED} RbtColour;
 // create red black tree node struct 
 struct RbtNode {
-  
   int data;
-  int colour;
-  RbtNode* parent;
+  RbtColour colour;
   RbtNode* left;
   RbtNode* right;
 };
 
+RbtNode* rbtCreateNode(int data);
+RbtNode* rbtAddNode(RbtNode** rootPtr, RbtNode* newNode);
+RbtColour getRbtNodeColour(RbtNode* node);
+void rightRotate(RbtNode** rootPtr);
+void leftRotate(RbtNode** rootPtr);
+void rightLeftRotate(RbtNode** rootPtr);
+void leftRightRotate(RbtNode** rootPtr);
+void rbtFixup(RbtNode** rootPtr, RbtNode* newNode);
+void flipColour(RbtNode* node);
 
-// function to perform Rbt insertion a node 
-struct RbtNode* rbtAddNode(RbtNode** rootPtr, RbtNode* newNode) {
-  RbtNode* root = *rootPtr;
-  //if tree is empty, return a new node 
-  if(root == NULL) 
-    return newNode;
-    
-  //otherwise recursive down the tree 
-  if(newNode->data < root->data) {
-    root->left = rbtAddNode(root->left, newNode);
-    root->left->parent = root;
-    
-  }else if(newNode->data > root->data) {
-        root->right = rbtAddNode(root->right, newNode);
-        root->right->parent = root;
-  }
-}
-
-void rightRotate(struct RbtNode* prev_node);
-void leftRotate(struct RbtNode* prev_node);
 
 #endif // REDBLACKTREE_H

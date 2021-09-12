@@ -1,0 +1,94 @@
+---
+:source:
+  :path: test
+  :file: test_RedBlackTree.c
+:successes:
+- :test: test_rightRotate_given_100_50_10_expect_correct_rotation
+  :line: 106
+  :message: ''
+  :unity_test_time: 0
+- :test: test_rightRotate_given_18_9_expect_correct_rotation
+  :line: 132
+  :message: ''
+  :unity_test_time: 0
+- :test: test_leftRotation_given_50_60_70_expect_left_rotation
+  :line: 156
+  :message: ''
+  :unity_test_time: 0
+- :test: test_leftRotate_given_node_20_15_30_25_35_expect_left_rotate
+  :line: 184
+  :message: ''
+  :unity_test_time: 0
+- :test: test_leftRotation_given_12_and_14_expect_left_rotation
+  :line: 215
+  :message: ''
+  :unity_test_time: 0
+- :test: test_rightLeftRotate_given_2_7_5_expect_right_left_rotate_correctly
+  :line: 238
+  :message: ''
+  :unity_test_time: 0
+- :test: test_leftRightRotate_given_7_5_6_expect_left_right_rotate_correctly
+  :line: 265
+  :message: ''
+  :unity_test_time: 0
+- :test: test_leftRightRotate_given_50_55_60_65_70_expect_left_right_rotate_correctly
+  :line: 295
+  :message: ''
+  :unity_test_time: 0
+- :test: test_rbtAddNode_given_newNode_9_expect_add_9_into_tree_left_colour_RED_no_violation
+  :line: 326
+  :message: ''
+  :unity_test_time: 0
+- :test: test_rbtAddNode_given_newNode_18_expect_add_18_into_tree_right_colour_RED_no_violation
+  :line: 348
+  :message: ''
+  :unity_test_time: 0
+- :test: test_rbtAddNode_given_newNode_15_expect_recolour_there_are_two_RED_in_the_tree_causing_properties_violation
+  :line: 410
+  :message: ''
+  :unity_test_time: 0
+- :test: test_rbtAddNode_given_newNode_19_expect_recolour_there_are_two_RED_in_the_tree_causing_properties_violation
+  :line: 452
+  :message: ''
+  :unity_test_time: 0
+- :test: test_rbtAddNode_given_newNode_55_expect_recolour_there_are_two_RED_in_the_tree_causing_properties_violation
+  :line: 493
+  :message: ''
+  :unity_test_time: 0
+- :test: test_rbtAddNode_given_newNode_17_expect_rotate_left_right_to_balance_the_tree_and_check_case_violation
+  :line: 535
+  :message: ''
+  :unity_test_time: 0
+- :test: test_rbtAddNode_given_newNode_19_expect_rotate_right_left_to_balance_the_tree_and_check_case_violation
+  :line: 574
+  :message: ''
+  :unity_test_time: 0
+- :test: test_rbtAddNode_given_newNode_14_expect_recolour_and_rotate_right
+  :line: 617
+  :message: ''
+  :unity_test_time: 0
+- :test: test_rbtAddNode_given_newNode_20_expect_recolour_and_rotate_left
+  :line: 667
+  :message: ''
+  :unity_test_time: 0
+- :test: test_rbtAddNode_given_newNode_11_expect_recolour_and_left_rotate
+  :line: 776
+  :message: ''
+  :unity_test_time: 0
+:failures:
+- :test: test_rbtAddNode_given_newNode_16_expect_add_16_into_tree_violation_properties_change_colour_of_the_previous_nodes_and_root
+  :line: 395
+  :message: Expected 0 Was 1
+  :unity_test_time: 0
+- :test: test_rbtAddNode_given_newNode_55_expect_recolour_and_left_rotate_violation_two_adjacent_RED_nodes_in_the_tree
+  :line: 739
+  :message: Expected 10648736 Was 10648608
+  :unity_test_time: 0
+:ignores: []
+:counts:
+  :total: 20
+  :passed: 18
+  :failed: 2
+  :ignored: 0
+:stdout: []
+:time: 0.016485100000863895
