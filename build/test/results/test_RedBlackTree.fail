@@ -98,7 +98,7 @@
   :unity_test_time: 0
 - :test: test_rbtAddNode_given_newNode_55_expect_recolour_and_left_rotate_violation_two_adjacent_RED_nodes_in_the_tree
   :line: 773
-  :message: Expected 7765328 Was 7765200
+  :message: Expected 8000432 Was 8000304
   :unity_test_time: 0
 :ignores: []
 :counts:
@@ -107,4 +107,4 @@
   :failed: 2
   :ignored: 0
 :stdout: []
-:time: 0.01923030000034487
+:time: 0.016617900000710506
