@@ -22,7 +22,7 @@ void rightRotate(RbtNode** rootPtr) {
     leftChild->right = root;
     leftChild->left = NULL;
     *rootPtr = leftChild;
-  }else if(root->left) {
+  }else if(leftChild) {
           root->left = leftChild->right;
           leftChild->right = root;
           *rootPtr = leftChild;
@@ -39,7 +39,7 @@ void leftRotate(RbtNode** rootPtr) {
     rightChild->left = root;
     rightChild->right = NULL;
     *rootPtr = rightChild;
-  }else if(root->right) {
+  }else if(rightChild) {
           root->right = rightChild->left;
           rightChild->left = root;
           *rootPtr = rightChild;
@@ -135,7 +135,7 @@ void rbtFixup(RbtNode** rootPtr, RbtNode* newNode) {
         flipColour(rightChild);
         flipColour(root);
       }        
-     }
+    }
    }
    // Case 3, rotation
   if(newNode->data > root->data) {
@@ -175,7 +175,7 @@ void rbtFixup(RbtNode** rootPtr, RbtNode* newNode) {
        flipColour(root);
      }
    } 
- }
+  }
 } 
 
 void flipColour(RbtNode* node) {
